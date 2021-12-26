@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <title>Dates converter</title>
+        <link rel="stylesheet" href="Design.css">
+    </head>
+
+    <body>
+        <p>Select a Date</p>
+        <form >
+            <h1>
+                Day <select name="Day">
+                    <option Value="1">1
+                    <option Value="2">2
+                    <option Value="3">3
+                    <option Value="4">4
+                    <option Value="5">5
+                    <option Value="6">6
+                    <option Value="7">7
+                    <option Value="8">8
+                    <option Value="9">9
+                    <option Value="10">10
+                    <option Value="11">11
+                    <option Value="12">12
+                    <option Value="13">13
+                    <option Value="14">14
+                    <option Value="15">15
+                    <option Value="16">16
+                    <option Value="17">17
+                    <option Value="18">18
+                    <option Value="19">19
+                    <option Value="20">20
+                    <option Value="21">21
+                    <option Value="22">22
+                    <option Value="23">23
+                    <option Value="24">24
+                    <option Value="25">25
+                    <option Value="26">26
+                    <option Value="27">27
+                    <option Value="28">28
+                    <option Value="29">29
+                    <option Value="30">30
+                    <option Value="31">31
+                  </select>
+            Month <select name="Month">
+                    <option Value="1">January
+                    <option Value="2">Febuary
+                    <option Value="3">March
+                    <option Value="4">April
+                    <option Value="5">May
+                    <option Value="6">June
+                    <option Value="7">July
+                    <option Value="8">August
+                    <option Value="9">September
+                    <option Value="10">October
+                    <option Value="11">November
+                    <option Value="12">December
+                  </select>
+            
+            Year <input type="text" name="Year" value="1948" ><h1>
+            <input type="button"
+                   value="Convert Date"
+                   onclick="Convert(Year.value, Month.value, Day.value);">
+                   <p id="hebrew"></p>
+          </form>
+          <script type="text/javascript">
+            function Convert(gy, gm, gd) {
+                fetch(`https://www.hebcal.com/converter?cfg=json&gy=${gy}&gm=${gm}&gd=${gd}&g2h=1`)
+                    .then(response => {
+                      return response.json();
+                    }).then(result => {
+                        document.getElementById('hebrew').innerHTML=result.hebrew;
+                    });
+            }
+          </script>
+
+<script src="https://sdk.scdn.co/spotify-player.js"></script>
+<script>
+window.onSpotifyWebPlaybackSDKReady = () => {
+  const userAccessToken = "[access token]";
+  const webPlayback = new Spotify.Player({
+    name: "Spotify Web Playback SDK",
+    getOAuthToken: callback => { callback(userAccessToken)}
+  });
+  webPlayback.connect();
+};
+</script>
+
+          
+    <h2>          <a href="http://www.linkedin.com/in/amitle2"> 
+        <img alt="Qries" src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+        width=80" height="80">
+    </a>
+    </h2>
+        <h3>          <a href="https://github.com/amitle2"> 
+            <img alt="Qries" src="https://icon-icons.com/downloadimage.php?id=143196&root=2351/PNG/512/&file=logo_github_icon_143196.png"
+            width=80" height="80">
+        </a>
+    </h3>
+    <h4>
+© Amit Levy
+    </h4>
+    <h6>
+        <a href="mailto: alamitlevy@gmail.com"> 
+            <img alt="Qries" src="https://icons.iconarchive.com/icons/cornmanthe3rd/metronome/256/Communication-email-blue-icon.png"
+            width=80" height="85">
+    </h6>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+ 
+        body{
+                background-image:url('https://i.ytimg.com/vi/R9mXtzn8meE/maxresdefault.jpg');
+                background-repeat:no-repeat;
+                background-size: contain;  
+                
+            }
+            
+            
+        p{
+            color:rgb(40, 158, 255);
+            font-size: 70px;
+            text-align: center;
+            font-weight: bold;
+
+        }
+        
+
+        h1{
+            color:rgb(40, 158, 255);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        h2{
+            position: absolute;
+            text-align: center;
+            bottom: 15px;
+            left: 48%;
+            
+            
+        }
+
+        h3{
+            position: absolute;
+            text-align: center;
+            bottom: 15px;
+            left: 38%;
+            
+        }
+        h4{
+            color:rgb(40, 158, 255);
+            font-size: 25px;
+            position: absolute;
+            bottom: 10px;
+            left: 1750px;
+            
+        }
+        h6{
+            position: absolute;
+            text-align: center;
+            bottom: 7px;
+            left: 57%;
+        }
+
+        
+
